@@ -1,5 +1,5 @@
 <div class="tabs-container">
-	<div *ngFor="let t of tabs" class="tab" [ngClass]="{'tab-active': t.active}" (click)='selectTab(t)'>
+	<div *ngFor="let t of tabs()" class="tab" [ngClass]="{'tab-active': t.active}" (click)='selectTab(t)'>
 		<mat-icon class="material-icons-outlined" color='primary' matTooltip='Close {{t.name}}'>{{t.icon}}</mat-icon>
 		<span>{{ t.name | translate }}</span>
         <mat-icon class='close' (click)='closeTab(t)'>close</mat-icon>
