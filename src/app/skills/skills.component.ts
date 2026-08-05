@@ -1,9 +1,10 @@
-import { Component, OnInit, ViewEncapsulation } from "@angular/core";
+import { Component, ViewEncapsulation } from "@angular/core";
 import { TabBase } from "../tabs/tab-base";
 import { Router } from "@angular/router";
 import { TabRegistryService } from '../services/tab-registry.service';
 
 @Component({
+  standalone: false,
 	selector: "app-skills",
 	templateUrl: "./skills.component.html",
     styleUrls: ["./skills.component.scss"],
@@ -11,7 +12,7 @@ import { TabRegistryService } from '../services/tab-registry.service';
 })
 export class SkillsComponent extends TabBase {
 
-    public iconName = 'format_list_bulleted';
+    public override iconName = 'format_list_bulleted';
 
 	constructor(router: Router, tabRegistry: TabRegistryService) {
 		super('Skills', 'format_list_bulleted', router, tabRegistry);

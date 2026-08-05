@@ -42,3 +42,5 @@ yarn-error.log
 
 .notes.md
 baseline.json
+# Angular build cache
+/.angular/

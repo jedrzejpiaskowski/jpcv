@@ -1,16 +1,18 @@
+type LiteEventHandler<T> = (data?: T) => void;
+
 interface ILiteEvent<T> {
-	on(handler: { (data?: T): void }): void;
-	off(handler: { (data?: T): void }): void;
+	on(handler: LiteEventHandler<T>): void;
+	off(handler: LiteEventHandler<T>): void;
 }
 
-class LiteEvent<T> implements ILiteEvent<T> {
-	private handlers: { (data?: T): void }[] = [];
+export class LiteEvent<T> implements ILiteEvent<T> {
+	private handlers: LiteEventHandler<T>[] = [];
 
-	public on(handler: { (data?: T): void }): void {
+	public on(handler: LiteEventHandler<T>): void {
 		this.handlers.push(handler);
 	}
 
-	public off(handler: { (data?: T): void }): void {
+	public off(handler: LiteEventHandler<T>): void {
 		this.handlers = this.handlers.filter((h) => h !== handler);
 	}
 

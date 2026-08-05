@@ -21,11 +21,22 @@
     }
 
 
-    .mat-card-header {
+    .mat-mdc-card-header {
         display: flex;
         align-items: center;
 
-        .mat-card-header-text {
+        // Material gives the avatar a 16px bottom margin, which lifts it above
+        // the title's centre line, and the 24px icon sits at the top of the
+        // 40px avatar box rather than in its middle. Correcting both puts the
+        // icon and the title on a shared centre line.
+        .mat-mdc-card-avatar {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mat-mdc-card-header-text {
             margin: 0;
         }
     }

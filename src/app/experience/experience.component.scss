@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@use '../../variables' as *;
 
 .experience-container {
     // display: flex;
@@ -61,7 +61,7 @@
     
             }
 
-            .mat-list-item, .mat-list-item-content {
+            .mat-mdc-list-item, .mat-mdc-list-item-unscoped-content {
                 padding: 0 !important;
             }
 

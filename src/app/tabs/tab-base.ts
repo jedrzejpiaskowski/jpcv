@@ -1,8 +1,11 @@
-import { OnInit } from "@angular/core";
+import { Directive } from "@angular/core";
 import { Router } from '@angular/router';
 import { TabRegistryService } from '../services/tab-registry.service';
 
-export abstract class TabBase implements OnInit {
+// Angular requires an explicit decorator on base classes that participate in
+// dependency injection.
+@Directive()
+export abstract class TabBase {
 	public tabName: string;
     public url: string;
 	public iconName: string;
@@ -14,7 +17,4 @@ export abstract class TabBase implements OnInit {
         this.tabName = tabName;
         this.tabRegistry.activate(this);
     }
-
-	ngOnInit(): void {
-	}
 }

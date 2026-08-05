@@ -3,6 +3,7 @@ import { TabInfo } from "./TabInfo";
 import { TabRegistryService } from '../services/tab-registry.service';
 
 @Component({
+  standalone: false,
 	selector: "app-tabs",
 	templateUrl: "./tabs.component.html",
     styleUrls: ["./tabs.component.scss"],

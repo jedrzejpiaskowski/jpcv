@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class TabRegistryService {
 
     tabInfos: TabInfo[] = [];
-    onTabChanged: (t: TabInfo[]) => any;
+    onTabChanged?: (t: TabInfo[]) => void;
         
     // private readonly onTabActivated = new LiteEvent<TabInfo>();
     // public get TabActivated() { return this.onTabActivated.expose(); }
@@ -56,18 +56,18 @@ export class TabRegistryService {
         this.updateTabs(tab);
     }
 
-    public subscribe (onTabChange: (tabs: TabInfo[]) => any) {
+    public subscribe (onTabChange: (tabs: TabInfo[]) => void) {
         console.log('subscribing');
         this.onTabChanged = onTabChange;
     }
 
-    private updateTabs(activeTab: TabInfo = null) {
-        if (activeTab == null) {
-            activeTab = this.tabInfos.find(t => t.active === true);
-        }
+    private updateTabs(activeTab: TabInfo | null = null) {
+        const nextActive = activeTab ?? this.tabInfos.find(t => t.active === true);
         console.log('updating');
         this.tabInfos.forEach(ti => ti.active = false);
-        activeTab.active = true;
+        if (nextActive) {
+            nextActive.active = true;
+        }
 
         if (this.onTabChanged) {
             this.onTabChanged(this.tabInfos);
