@@ -1,6 +1,18 @@
-# JPCV
+# jpcv
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+Personal CV / resume site built with [Angular](https://angular.dev) 22 and Angular Material.
+
+## Prerequisites
+
+Node.js **22.23.2** (pinned in `.node-version`). Angular 22 requires
+`^22.22.3 || ^24.15.0 || >=26.0.0`.
+
+With [fnm](https://github.com/Schniz/fnm):
+
+```sh
+fnm use          # picks up .node-version
+npm install
+```
 
 ## Development server
 
@@ -12,16 +24,21 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Production is the default configuration; use `ng build --configuration development` for an unoptimized build.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `ng test` to execute the unit tests via [Vitest](https://vitest.dev).
 
-## Running end-to-end tests
+## Linting
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `ng lint` to lint TypeScript and templates via [ESLint](https://eslint.org) and [angular-eslint](https://github.com/angular-eslint/angular-eslint).
+
+## Deploying
+
+Run `ng deploy` to publish a production build to GitHub Pages via
+[angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages).
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/main/README.md).

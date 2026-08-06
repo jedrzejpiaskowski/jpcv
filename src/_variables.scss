@@ -1,0 +1,15 @@
+// Shared design tokens.
+//
+// This partial emits no CSS, so component styles can `@use` it freely without
+// duplicating the Material theme into every component bundle. Only
+// `styles.scss` may include the Material theme mixins.
+
+$vs-dark: #333333;
+$vs-darkest: #1e1e1e;
+$vs-light: #989898;
+$vs-accent: #3794ff;
+
+// Resolved from the Material palettes configured in `styles.scss`:
+// blue 500 (primary default hue) and deep-orange A200 (accent default hue).
+$primary: #2196f3;
+$accent: #ff6e40;

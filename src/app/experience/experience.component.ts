@@ -1,9 +1,10 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { TabBase } from '../tabs/tab-base';
 import { Router } from '@angular/router';
 import { TabRegistryService } from '../services/tab-registry.service';
 
 @Component({
+  standalone: false,
   selector: 'app-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss'],
@@ -11,7 +12,7 @@ import { TabRegistryService } from '../services/tab-registry.service';
 })
 export class ExperienceComponent extends TabBase{
 
-  public iconName: string = 'timeline';
+  public override iconName = 'timeline';
 
   constructor(router: Router, tabRegistry: TabRegistryService) {
     super('Experience', 'work_outline', router, tabRegistry);

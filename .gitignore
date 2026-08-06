@@ -42,3 +42,9 @@ yarn-error.log
 
 .notes.md
 baseline.json
+# Angular build cache
+/.angular/
+
+# Stale local build output. The site is published from the gh-pages branch
+# via `ng deploy`, not from /docs, so nothing reads this directory.
+/docs/

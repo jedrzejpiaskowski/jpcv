@@ -2,7 +2,7 @@
 	<div id="about-me-container">
 		<div class="left-section">
 			<div class="image-container">
-				<img src="./assets/my_photo_new.jpg" />
+				<img src="./assets/photo.jpg" />
 			</div>
 			<div class="basic-info">
 				<h1>Jędrzej Piaskowski</h1>
@@ -21,9 +21,10 @@
 			<h1><mat-icon color="accent">person_outline</mat-icon>{{ 'AboutMe.Header' | translate }}</h1>
 			<p i18n>{{ 'AboutMe.A1' | translate }}</p>
 			<p i18n>{{ 'AboutMe.A2' | translate }}</p>
+			<p i18n>{{ 'AboutMe.A2AI' | translate }}</p>
             <p i18n>
                 <span [innerHtml]="'AboutMe.A31' | translate"></span>
-                <a a routerLink='/contact'>{{ 'AboutMe.A3C' | translate }}</a>
+                <a routerLink='/contact'>{{ 'AboutMe.A3C' | translate }}</a>
                 <span>{{ 'AboutMe.A32' | translate }}</span>
             </p>
             <mat-divider></mat-divider>

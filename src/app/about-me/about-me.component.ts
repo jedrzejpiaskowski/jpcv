@@ -4,15 +4,14 @@ import { Router } from "@angular/router";
 import { TabRegistryService } from "../services/tab-registry.service";
 
 @Component({
+  standalone: false,
 	selector: "app-about-me",
 	templateUrl: "./about-me.component.html",
 	styleUrls: ["./about-me.component.scss"],
 })
 export class AboutMeComponent extends TabBase implements OnInit {
-	public url: string;
-	public iconName = "mood";
+	public override iconName = "mood";
 	public hobbies: Hobby[] = [];
-	public hoveredHobby: Hobby;
 
 	constructor(
 		router: Router,
