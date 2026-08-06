@@ -1,6 +1,11 @@
 # jpcv
 
-Personal CV / resume site built with [Angular](https://angular.dev) 22 and Angular Material.
+Personal CV / resume site for Jędrzej Piaskowski — a software developer Poland,
+working mainly with .NET, frontend technologies and AI-assisted tooling.
+
+A bilingual (English / Polish) single-page app with Welcome, About me, Skills,
+Experience and Contact sections, built with [Angular](https://angular.dev) 22 and
+Angular Material.
 
 ## Prerequisites
 
@@ -36,8 +41,26 @@ Run `ng lint` to lint TypeScript and templates via [ESLint](https://eslint.org) 
 
 ## Deploying
 
-Run `ng deploy` to publish a production build to GitHub Pages via
-[angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages).
+The site is published from the `gh-pages` branch via
+[angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages), and is
+live at <https://jedrzejpiaskowski.github.io/jpcv/> (lowercase — the uppercase path
+404s).
+
+```sh
+ng deploy --base-href=/jpcv/
+```
+
+`--base-href` is required on every deploy. This is a GitHub Pages *project* site, so
+it is served from a subpath rather than the domain root. Without the flag the build
+ships `<base href="/">` and every asset request resolves against the domain root,
+404s, and the page renders blank. angular-cli-ghpages v3 does not infer the value —
+older 0.6.x releases derived it from the repo name, which is why this project ran for
+years on a bare `ng deploy`.
+
+If GitHub Pages serves this repo's `README.md` instead of the app, the publishing
+source has been switched away from `gh-pages`. Check Settings → Pages → Build and
+deployment: Source `Deploy from a branch`, Branch `gh-pages` / `(root)`. Pointing it
+at `main` cannot work — `main` holds the Angular source, and nothing there builds it.
 
 ## Further help
 
