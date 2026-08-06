@@ -36,7 +36,8 @@
     },
     "Skills": {
         "DB": "Databases",
-        "Others": "Other"
+        "AI": "AI-assisted development",
+        "DevOps": "DevOps & Tools"
     },
     "Experience": {
         "Now": "PRESENT",
@@ -48,7 +49,7 @@
             "Desc": "I work for a British company that is a leader of re-commerce in the UK and US and develops its own platform for selling and renting consumer technology. My team is responsible for the checkout process.",
             "Resp1": "New software development: coding, debugging, testing",
             "Resp2": "Participating in deployments, planning, creating tasks, discussing epics",
-            "Resp3": "Analysis, maintenance, reporting bugs"
+            "Resp3": "Analysis, maintenance, investigating and reporting bugs"
         },
         "Sii": {
             "Desc": "Assigned to mBank Lodz Headquarters (one of Sii partners) as external worker. I work in a small team participating in wide range of projects: to be used mainly, but not only, in internal bank structures. Requirements are very diverse: from small tools designed to support work within the team, to complex multi-layered web services and systems. Our team focuses on the use of modern technologies and develops high-quality, testable software.",

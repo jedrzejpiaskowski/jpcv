@@ -36,7 +36,8 @@
     },
     "Skills": {
         "DB": "Bazy danych",
-        "Others": "Inne"
+        "AI": "Programowanie wspomagane AI",
+        "DevOps": "DevOps i narzędzia"
     },
     "Experience": {
         "Now": "OBECNIE",
